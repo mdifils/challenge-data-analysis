@@ -19,7 +19,7 @@ Team members : Anne Jungers, Graciela Lopez Rossion, Michel Ombessa, Minh Hien V
 
 # Check if each columns/variables exists NaN, zero, or incorrect data types values (ex: 'no' in price)
 
-# Changes the datatypes for 
+# Changes the datatypes
 # Reports
 # - How many missing values for each, zero -> calculate percentage of missing values
 # - The outliers for each valriables
