@@ -65,7 +65,15 @@ What are the most expensive municipalities in Flanders? (Average price, median p
 What are the less expensive municipalities in Belgium? (Average price, median price, price per square meter)
 What are the less expensive municipalities in Wallonia? (Average price, median price, price per square meter)
 What are the less expensive municipalities in Flanders? (Average price, median price, price per square meter)
-Bonus
+
+
+# Bonus
 In your opinion, which model of machine learning could solve the task of predicting the sales?]
+
+[...]" *Multivariate Regression*: supervised machine learning algorithm involving multiple data variables for analysis. A Multivariate regression is an extension of multiple regression with one dependent variable and multiple independent variables. Based on the number of independent variables, we try to predict the output.
+
+Multivariate regression tries to find out a formula that can explain how factors in variables respond simultaneously to changes in others." (source: https://www.mygreatlearning.com/blog/introduction-to-multivariate-regression/ consulted on 29/06/21)
+
+In our  case, we have only one target variable, which is the price. Thus the goal of this project is to see (to be able to predict in the future, using ML) how the other variables (location, n° of rooms, swimming pool, etc...) impact the price of a property.
 
 
