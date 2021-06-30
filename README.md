@@ -95,11 +95,14 @@ print(df.province.value_counts())
 
 ### Create the subsets of data 
 
+
 ### Create new Series/columns to plot the data
+
 
 ### Check the target variables, input, output variables
 
-## Data Analysis
+
+## Data Interpretation
 
 
 ## Bonus
