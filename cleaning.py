@@ -79,5 +79,7 @@ print(df['zone_num'].value_counts())
 # add new column
 df['price_per_m2'] = df.price/df.area
 
+print(df.head(10))
+
 # saving cleaned dataframe to .csv file
 df.to_csv('cleaned_dataset.csv', encoding='utf-8', index=False)
