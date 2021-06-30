@@ -121,13 +121,21 @@ In our case, the response variable is the target (price variable). So the others
 + The data point that is located outside the whiskers of the box plot.
 
 2.Which variables would you delete and why ?
+
 3.In your opinion, which 5 variables are the most important and why?
+
 4.What are the most expensive municipalities in Belgium? (Average price, median price, price per square meter)
+
 What are the most expensive municipalities in Wallonia? (Average price, median price, price per square meter)
+
 What are the most expensive municipalities in Flanders? (Average price, median price, price per square meter)
+
 What are the less expensive municipalities in Belgium? (Average price, median price, price per square meter)
+
 What are the less expensive municipalities in Wallonia? (Average price, median price, price per square meter)
+
 What are the less expensive municipalities in Flanders? (Average price, median price, price per square meter)
+
 ## Bonus
 In your opinion, which model of machine learning could solve the task of predicting the sales?] It is possible.
 
