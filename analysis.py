@@ -40,8 +40,8 @@ sns.scatterplot(ax=axes[1,1], y='land_surface', x='price', data=df)
 axes[1,1].set_title('scatterplot between price and land_surface')
 
 # garden_surface
-sns.scatterplot(ax=axes[1,2], y='garden_surface', x='price', data=df)
-axes[1,2].set_title('scatterplot between price and garden_surface')
+sns.scatterplot(ax=axes[1,2], x='subtype_property', y='price', data=df)
+axes[1,2].set_title('scatterplot between price and subtype_property')
 
-# plt.savefig('scatterplot.png')
+plt.savefig('scatterplot.png')
 plt.show()
