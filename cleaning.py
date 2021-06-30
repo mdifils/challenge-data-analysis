@@ -13,9 +13,11 @@ df.rename(columns={'Area [m²]': 'area', 'Price [€]': 'price', 'state of the b
                    'fully equipped kitchen': 'kitchen_equipped', 'open fire': 'open_fire', 'locality [zip code]': 'zip_code',
                    'surface of the land [m²]': 'land_surface', 'terrace surface [m²]': 'terrace_surface',
                    'swimming pool': 'swimming_pool', 'type of property': 'property_type',
-                   'subtype of property': 'property_subtype', 'garden surface [m²]': 'garden_surface'}
+                   'subtype of property': 'subtype_property', 'garden surface [m²]': 'garden_surface'}
 , inplace=True)
 print(df.head())
+# Checking any duplicated rows
+print(df.duplicated().any())
 
 # Checking the columns type
 print(df.dtypes)
@@ -52,7 +54,30 @@ conditions = [ (1000 <= df['zip_code']) & (df['zip_code'] < 1300),
               (9000 <= df['zip_code']) & (df['zip_code'] < 10000)]
 values = ['Brussel-Capital', 'Walloon Brabant','Flemish Brabant','Antwerp','Limburg','Liege','Namur','Luxembourg','Hainaut','West Flanders','East Flanders']
 df['province'] = np.select(conditions, values)
-print(df.head())
+print(df['province'].value_counts())
+
+# Add new column zone (region)
+conditions = [ (1000 <= df['zip_code']) & (df['zip_code'] < 1300),
+              ((1300 <= df['zip_code']) & (df['zip_code'] < 1500))| 
+              ((4000 <= df['zip_code']) & (df['zip_code'] < 8000)),
+              ((1500 <= df['zip_code']) & (df['zip_code'] < 4000))| 
+              ((8000 <= df['zip_code']) & (df['zip_code'] < 10000))]
+
+values = ['Brussels_zone', 'Wallonia_zone','Flanders_zone']
+df['Zone'] = np.select(conditions, values)
+print(df['Zone'].value_counts())
+
+# add new column 
+conditions = [(df['Zone'] == 'Brussels_zone'),
+              (df['Zone'] == 'Wallonia_zone'), 
+              (df['Zone'] == 'Flanders_zone')]
+
+values = [1,2,3]
+df['zone_num'] = np.select(conditions, values)
+print(df['zone_num'].value_counts())
+
+# add new column
+df['price_per_m2'] = df.price/df.area
 
 # saving cleaned dataframe to .csv file
 df.to_csv('cleaned_dataset.csv', encoding='utf-8', index=False)
