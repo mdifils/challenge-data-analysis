@@ -92,6 +92,27 @@ print(df.province.value_counts())
 ![Provinces](/images/provinces.png)
 
 ## Data Analysis
+According to the purpose of the project, the target variable is clearly the `price` column.
+### How many rows and columns ?
+```python
+# Importing dataset from .csv file to pandas dataframe
+df = pd.read_csv('cleaned_dataset.csv')
+
+# Number of rows and columns
+print(df.shape)
+```
+(8333, 18)
+### What is the correlation between the variables and the target ?
+Let's visualize some scatter plots between the target: `price` and the other variables.
+
+To create a bare-bones scatterplot, we must do three things:
+1. Specify the source data frame
+2. Set the x axis, which is generally the name of a predictor/independent variable
+3. Set the y axis, which is generally the name of a response/dependent variable
+
+In our case, the response variable is the target (price variable). So the others variable, are predictors or independant variables that will probably influence the target.
+
+![Scatterplot](/images/scatterplot.png)
 
 ### Create the subsets of data 
 
